@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: crm-web
+
+  profiles: dev
+
+server:
+  port: 8768
+#  domain: crm.dt.com
+#  context-path: ""
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9090/eureka/
+feign:
+  hystrix:
+    enabled: true
+debug: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 13000000000
+ribbon:
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 2
+  OkToRetryOnAllOperations: true
+  ReadTimeout: 12000
+  ConnectTimeout: 10000
