@@ -32,7 +32,6 @@ public class ResponseBean implements Serializable {
     public ResponseBean(Integer errorCode, String errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
-
     }
 
     public ResponseBean() {

@@ -4,6 +4,7 @@ import com.dt.crm.service.serviceimpl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,8 +18,8 @@ public class UserController {
     private UserServiceImpl userService;
 
     @GetMapping("/list")
-    public Object getUserList() {
-        return this.userService.getUserList();
+    public Object getUserList(@RequestParam(required = false, name = "userName") String userName) {
+        return this.userService.getUserList(userName);
     }
 
 }

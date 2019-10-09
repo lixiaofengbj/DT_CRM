@@ -1,21 +1,20 @@
 package com.dt.pojo;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * @Author: lixiaofeng
  * @Date: 2019/3/5 10:49
  */
 @Table(name = "crm_user")
-public class CrmUser implements Serializable {
+public class CrmUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SELECT LAST_INSERT_ID()")
     private Integer id;
     @Column(name = "user_name")
     private String userName;
-    private String passeord;
+    private String password;
 
     public Integer getId() {
         return id;
@@ -33,12 +32,12 @@ public class CrmUser implements Serializable {
         this.userName = userName;
     }
 
-    public String getPasseord() {
-        return passeord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasseord(String passeord) {
-        this.passeord = passeord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public CrmUser() {

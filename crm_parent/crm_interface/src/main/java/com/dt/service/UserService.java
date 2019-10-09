@@ -5,6 +5,7 @@ import com.dt.common.bean.ResponseBean;
 import com.dt.service.fallback.UserServiceFallback;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Author: lixiaofeng
@@ -14,5 +15,5 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface UserService {
 
     @GetMapping("/user/list")
-    ResponseBean getUserList();
+    ResponseBean getUserList(@RequestParam(required = false, value = "userName") String userName);
 }

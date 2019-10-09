@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class UserServiceFallback implements UserService {
 
     @Override
-    public ResponseBean getUserList() {
+    public ResponseBean getUserList(String userName) {
         System.out.println("连接失败-断路器");
         return null;
     }
