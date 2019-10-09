@@ -15,5 +15,6 @@ eureka:
     password: root
   mybatis:
     typeAliasesPackage: com.dt.pojo
-    mapper-locations: classpath*:mapper/*.xml
+    mapperLocations: classpath:mapper/*.xml
+
 
