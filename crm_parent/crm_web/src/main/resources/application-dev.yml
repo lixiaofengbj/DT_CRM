@@ -1,14 +1,12 @@
 spring:
+  profiles:
+    active: dev
   application:
     name: crm-web
-
-  profiles: dev
-
 server:
   port: 8768
 #  domain: crm.dt.com
 #  context-path: ""
-
 eureka:
   client:
     service-url:
@@ -17,7 +15,6 @@ feign:
   hystrix:
     enabled: true
 debug: true
-
 hystrix:
   command:
     default:
