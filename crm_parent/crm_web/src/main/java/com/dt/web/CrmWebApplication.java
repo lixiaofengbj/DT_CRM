@@ -11,7 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages = {"com.dt"})
+@EnableFeignClients
 @EnableHystrix
 @EnableSwagger2
 @Controller
