@@ -13,8 +13,6 @@ eureka:
     url: jdbc:mysql://localhost:3306/dt_crm
     username: root
     password: root
-  mybatis:
-    typeAliasesPackage: com.dt.pojo
-    mapperLocations: classpath:mapper/*.xml
-
-
+mybatis:
+  type-aliases-package: com.dt.pojo
+  mapper-locations: classpath*:mapper/*.xml

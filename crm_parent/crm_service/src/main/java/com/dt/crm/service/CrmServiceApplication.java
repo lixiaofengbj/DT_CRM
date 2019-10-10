@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan("com.dt.mapper*")
+@MapperScan(basePackages = {"com.dt.mapper"})
 @ComponentScan(value = {"com.dt"})
 public class CrmServiceApplication {
 
