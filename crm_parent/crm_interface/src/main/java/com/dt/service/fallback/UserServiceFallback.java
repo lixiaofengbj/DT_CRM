@@ -9,11 +9,10 @@ import org.springframework.stereotype.Component;
  * @Date: 2019/3/5 11:20
  */
 @Component
-public class UserServiceFallback implements UserService {
+public class UserServiceFallback extends DefaultFallBackImpl implements UserService {
 
     @Override
     public ResponseBean getUserList(String userName) {
-        System.out.println("连接失败-断路器");
-        return null;
+        return super.fallBack();
     }
 }

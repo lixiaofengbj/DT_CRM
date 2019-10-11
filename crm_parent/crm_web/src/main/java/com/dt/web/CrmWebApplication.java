@@ -11,11 +11,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.dt"})
 @EnableHystrix
 @EnableSwagger2
 @Controller
-@ComponentScan(value = {"com.dt"})
+@ComponentScan(basePackages = {"com.dt"})
 public class CrmWebApplication {
 
     public static void main(String[] args) {

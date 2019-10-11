@@ -15,5 +15,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserService {
 
     @GetMapping("/user/list")
-    ResponseBean getUserList(@RequestParam(required = false, value = "userName") String userName);
+    ResponseBean getUserList(@RequestParam(required = false, name = "userName") String userName);
 }

@@ -7,7 +7,8 @@ package com.dt.common.constant;
 public enum ErrorEnum {
 
     SUCCESS(0, "success"),
-    ERROR(500, "服务异常");
+    ERROR(500, "服务异常"),
+    COMMUNICATION_ERROR(600, "通信异常");
 
     private Integer errorCode;
     private String errorMessage;

@@ -29,7 +29,8 @@ public class UserController {
 
     @GetMapping("/list")
     @ApiOperation("获取用户list")
-    public ResponseBean userList(@ApiParam(name = "userName", value = "用户名") @RequestParam(required = false) String userName) {
+    public ResponseBean userList(@ApiParam(name = "userName", value = "用户名")
+                                 @RequestParam(required = false, name = "userName") String userName) {
         return this.userService.getUserList(userName);
     }
 }
