@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DT_CRM.iml" filepath="$PROJECT_DIR$/.idea/DT_CRM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_common/crm_common.iml" filepath="$PROJECT_DIR$/crm_parent/crm_common/crm_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_eureka/crm_eureka.iml" filepath="$PROJECT_DIR$/crm_parent/crm_eureka/crm_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_interface/crm_interface.iml" filepath="$PROJECT_DIR$/crm_parent/crm_interface/crm_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_mapper/crm_mapper.iml" filepath="$PROJECT_DIR$/crm_parent/crm_mapper/crm_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_parent.iml" filepath="$PROJECT_DIR$/crm_parent/crm_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_pojo/crm_pojo.iml" filepath="$PROJECT_DIR$/crm_parent/crm_pojo/crm_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_service/crm_service.iml" filepath="$PROJECT_DIR$/crm_parent/crm_service/crm_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm_parent/crm_web/crm_web.iml" filepath="$PROJECT_DIR$/crm_parent/crm_web/crm_web.iml" />
+    </modules>
+  </component>
+</project>
