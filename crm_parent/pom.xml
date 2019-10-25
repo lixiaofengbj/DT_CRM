@@ -84,14 +84,11 @@
 
     <!--项目相关的所有依赖-->
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
     </dependencies>
-
 
     <!--配置-->
     <properties>
@@ -127,7 +124,6 @@
                 <artifactId>commons-codec</artifactId>
                 <version>${commons-codec.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
