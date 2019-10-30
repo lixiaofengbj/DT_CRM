@@ -42,6 +42,7 @@ public class UserController {
         Subject subject = SecurityUtils.getSubject();
         AuthenticationToken token = new UsernamePasswordToken(userName, MD5.sign(password));
         subject.login(token);
+
         CrmUserVo user = (CrmUserVo) subject.getPrincipal();
         session.setAttribute("userSession", user);
         return null;
