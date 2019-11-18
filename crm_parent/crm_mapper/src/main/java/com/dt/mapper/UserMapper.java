@@ -7,5 +7,9 @@ import java.util.List;
 
 public interface UserMapper extends Mapper<CrmUser> {
 
-    List<CrmUser> selectByUserName();
+    List<CrmUser> findList(String userName);
+
+    CrmUser findByUserName(String userName);
+
+    List<Integer> findRoleIdByUserId(Integer userId);
 }

@@ -7,9 +7,10 @@ package com.dt.pojo;
 public class CrmMenuVo {
     private Integer id;
     private Integer pid;
-    private String name;
-    private String desc;
+    private String menuName;
+    private String synopsis;
     private String code;
+    private String href;
 
     public Integer getId() {
         return id;
@@ -27,20 +28,20 @@ public class CrmMenuVo {
         this.pid = pid;
     }
 
-    public String getName() {
-        return name;
+    public String getMenuName() {
+        return menuName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getSynopsis() {
+        return synopsis;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
     }
 
     public String getCode() {
@@ -49,5 +50,13 @@ public class CrmMenuVo {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getHref() {
+        return href;
+    }
+
+    public void setHref(String href) {
+        this.href = href;
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dt.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="com.dt.pojo.CrmRole">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="pid" jdbcType="INTEGER" property="pid"/>
+        <result column="role_name" jdbcType="VARCHAR" property="roleName"/>
+        <result column="synopsis" jdbcType="VARCHAR" property="synopsis"/>
+    </resultMap>
+
+    <select id="findList" resultMap="BaseResultMap">
+        SELECT * FROM crm_role WHERE role_name LIKE CONCAT('%',#{roleName},'%' )
+    </select>
+
+    <select id="findMenuIdByRoleId" resultType="java.lang.Integer">
+        SELECT menu_id FROM crm_role_menu WHERE role_id = #{roleId}
+    </select>
+
+</mapper>

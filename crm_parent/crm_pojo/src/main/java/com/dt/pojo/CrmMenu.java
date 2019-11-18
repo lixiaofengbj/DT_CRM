@@ -1,5 +1,6 @@
 package com.dt.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,9 +15,19 @@ public class CrmMenu {
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SELECT LAST_INSERT_ID()")
     private Integer id;
     private Integer pid;
-    private String name;
-    private String desc;
+    @Column(name = "menu_name")
+    private String menuName;
+    private String synopsis;
     private String code;
+    private String href;
+
+    public String getHref() {
+        return href;
+    }
+
+    public void setHref(String href) {
+        this.href = href;
+    }
 
     public Integer getId() {
         return id;
@@ -34,20 +45,20 @@ public class CrmMenu {
         this.pid = pid;
     }
 
-    public String getName() {
-        return name;
+    public String getMenuName() {
+        return menuName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMenuName(String menuName) {
+        this.menuName = menuName;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getSynopsis() {
+        return synopsis;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
     }
 
     public String getCode() {

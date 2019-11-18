@@ -13,8 +13,9 @@ public class CrmRole {
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "SELECT LAST_INSERT_ID()")
     private Integer id;
     private Integer pid;
-    private String name;
-    private String desc;
+    @Column(name = "role_name")
+    private String roleName;
+    private String synopsis;
 
     public Integer getId() {
         return id;
@@ -32,19 +33,19 @@ public class CrmRole {
         this.pid = pid;
     }
 
-    public String getName() {
-        return name;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getSynopsis() {
+        return synopsis;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
     }
 }

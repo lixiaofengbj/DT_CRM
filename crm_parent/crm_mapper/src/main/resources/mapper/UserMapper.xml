@@ -8,8 +8,16 @@
         <result column="password" jdbcType="VARCHAR" property="password"/>
     </resultMap>
 
-    <select id="selectByUserName" resultMap="BaseResultMap">
-        SELECT * from crm_user
+    <select id="findList" resultMap="BaseResultMap">
+        SELECT * FROM crm_user WHERE user_name LIKE CONCAT('%',#{userName},'%' )
+    </select>
+
+    <select id="findByUserName" resultMap="BaseResultMap">
+        SELECT * FROM crm_user WHERE user_name = #{userName}
+    </select>
+
+    <select id="findRoleIdByUserId" resultType="java.lang.Integer">
+        SELECT role_id FROM crm_user_role WHERE user_id = #{userId}
     </select>
 
 </mapper>
